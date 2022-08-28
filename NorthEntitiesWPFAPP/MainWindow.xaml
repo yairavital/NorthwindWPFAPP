@@ -1,0 +1,46 @@
+﻿<Window x:Class="NorthEntitiesWPFAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NorthEntitiesWPFAPP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Style="{StaticResource wndBack}">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FFAFB0B2"/>
+            <GradientStop Color="#FFD7E3F0" Offset="0.445"/>
+            <GradientStop Color="#FFE2EAF3" Offset="0.53"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Home Work-Avital Yair" Grid.Row="0" HorizontalAlignment='Center' Margin="0,41,0,46" Grid.RowSpan="2"  FontFamily="Bahnschrift Light" FontSize="36" FontWeight="Bold" Foreground="#FFCED7E9" OpacityMask="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" Panel.ZIndex="6"/>
+        <WrapPanel Name="Buttons" VerticalAlignment="Stretch" Width="184" Height="252" Grid.RowSpan="3" Orientation="Vertical" Panel.ZIndex="5" Margin="154,73,62,0" HorizontalAlignment="Right"  >
+            <Button Name="Btn1" Margin="5" Padding="10" Content="Exercise1" Click="Btn1_OnClick" Style="{StaticResource BtnStyle}"/>
+            <Button Name="Btn2" Margin="5" Padding="10" Content="Exercise2" Click="Btn2_Click" Style="{StaticResource BtnStyle}"/>
+            <Button Name="Btn3" Margin="5" Padding="10" Content="Exercise3" Click="Btn3_Click"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            <Button Name="Btn4" Margin="5" Padding="10" Content="Exercise4" Click="Btn4_Click"  />
+            <Button Name="Btn5" Margin="5" Padding="10" Content="Exercise5" Click="btn5_click" />
+            <Button Name="Btn6" Margin="5" Padding="10" Content="Exercise6" Click="btn6_click" />
+            <Button Name="Btn7" Margin="5" Padding="10" Content="Exercise7" Click="Btn7_click" />
+            <Button Name="Btn8" Margin="5" Padding="10" Content="Exercise8" Click="Btn8_click" />
+            <Button Name="Btn9" Margin="5" Padding="10" Content="Exercise9" Click="Btn9_Click" />
+            <Button Name="Btn10" Margin="5" Padding="10"  Content="Exercise10" Click="Btn10_click"  />
+        </WrapPanel>
+        <WrapPanel Name="DataGridPanel" Grid.Row="2" Panel.ZIndex="10">
+            <DataGrid Name="Dgrid" Style="{StaticResource DgriStyle}" Panel.ZIndex="3"/>
+        </WrapPanel>
+        <Image Margin="114,41,43,54" Source="/הורדה.jpg" Stretch="UniformToFill" Grid.RowSpan="3" Opacity="0.9">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/הורדה.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+    </Grid>
+
+</Window>
